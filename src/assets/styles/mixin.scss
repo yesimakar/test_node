@@ -1,0 +1,22 @@
+@import './variables';
+
+/* BEGIN Font Definition */
+@mixin font-def($font, $font-path, $font-type: $regular-font-type) {
+  src: url('#{$font-path}/#{$font}/#{$font-type}/eot/#{$font}-#{$font-type}.eot'),
+    url('#{$font-path}/#{$font}/#{$font-type}/eot/#{$font}-#{$font-type}.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-path}/#{$font}/#{$font-type}/woff2/#{$font}-#{$font-type}.woff2') format('woff2'),
+    url('#{$font-path}/#{$font}/#{$font-type}/woff/#{$font}-#{$font-type}.woff') format('woff'),
+    url('#{$font-path}/#{$font}/#{$font-type}/ttf/#{$font}-#{$font-type}.ttf') format('truetype'),
+    url('#{$font-path}/#{$font}/#{$font-type}/svg/#{$font}-#{$font-type}.svg##{$font}') format('svg');
+}
+
+@mixin font-definition($font, $font-type) {
+  src: url('#{$default-font-path}/#{$font}/ttf/#{$font}-#{$font-type}.ttf') format('truetype'),
+    url('#{$default-font-path}/#{$font}/eot/#{$font}-#{$font-type}.eot'),
+    url('#{$default-font-path}/#{$font}/eot/#{$font}-#{$font-type}.eot?#iefix') format('embedded-opentype'),
+    url('#{$default-font-path}/#{$font}/woff2/#{$font}-#{$font-type}.woff2') format('woff2'),
+    url('#{$default-font-path}/#{$font}/woff/#{$font}-#{$font-type}.woff') format('woff'),
+    url('#{$default-font-path}/#{$font}/svg/#{$font}-#{$font-type}.svg##{$font}') format('svg');
+}
+
+/* END Font Definition */
